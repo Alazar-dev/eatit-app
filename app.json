@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "eatit-app",
+    "slug": "eatit-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "eatit-app"
+}
