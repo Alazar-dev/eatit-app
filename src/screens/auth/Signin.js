@@ -11,7 +11,7 @@ import {
   ScrollView,
 } from "react-native";
 
-export default function LoginScreen({ navigation }) {
+export default function Signin({ navigation }) {
   return (
     <SafeAreaView>
       <ScrollView>
@@ -24,10 +24,10 @@ export default function LoginScreen({ navigation }) {
         </View>
         <View style={tw`py-5 px-8`}>
           <View style={tw`flex flex-row justify-between pb-10 px-10`}>
-            <TouchableOpacity onPress={() => navigation.navigate("login")}>
+            <TouchableOpacity onPress={() => navigation.navigate("Signin")}>
               <Text>Sign-in</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate("signup")}>
+            <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
               <Text>Sign-up</Text>
             </TouchableOpacity>
           </View>
@@ -45,7 +45,7 @@ export default function LoginScreen({ navigation }) {
         </View>
         <View style={tw`flex items-center w-full`}>
           <TouchableOpacity
-            onPress={() => navigation.navigate("home")}
+            onPress={() => navigation.navigate("Home")}
             style={tw`bg-yellow-700 w-72 flex items-center py-4 rounded-3xl`}
           >
             <Text style={tw`text-white`}>Sign-in</Text>

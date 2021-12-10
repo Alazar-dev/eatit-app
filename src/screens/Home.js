@@ -10,14 +10,16 @@ import {
 import tw from "tailwind-react-native-classnames";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     <SafeAreaView>
       <ScrollView>
-        <View>
-          <Text style={tw`text-3xl font-bold`}>
-            Healthy {"\n"} Food for you
-          </Text>
+        <View style={tw`py-4 flex flex-row justify-between mr-10`}>
+          <Text style={tw`text-2xl ml-6 font-bold`}>Healthy Food</Text>
+          <View style={tw`flex flex-row`}>
+            <Icon name="sliders" size={20} />
+            <Text style={tw`text-xl  text-yellow-600`}>Week</Text>
+          </View>
         </View>
         <ScrollView style={tw`p-3`} horizontal>
           <View style={tw`px-4`}>
@@ -57,36 +59,38 @@ export default function Home() {
           </View>
         </ScrollView>
         <ScrollView horizontal>
-          <View style={tw`mx-12`}>
-            <Image
-              style={tw`rounded-full w-48`}
-              source={require("../assets/images/download.jpeg")}
-            />
-            <Text style={tw`font-bold text-yellow-600 text-center`}>
-              Breakfast
-            </Text>
-            <Text style={tw`font-bold text-center text-2xl py-2`}>
-              Fish Salad
-            </Text>
-            <View style={tw`flex flex-row justify-between px-6`}>
-              <View>
-                <Text
-                  style={tw`font-bold text-3xl text-center text-yellow-600`}
-                >
-                  25
-                </Text>
-                <Text style={tw`text-yellow-600`}>dollars</Text>
-              </View>
-              <View>
-                <Text
-                  style={tw`font-bold text-3xl text-center text-yellow-600`}
-                >
-                  500
-                </Text>
-                <Text style={tw`text-yellow-600`}>calories</Text>
+          <TouchableOpacity onPress={() => navigation.navigate("Break Fast")}>
+            <View style={tw`mx-12`}>
+              <Image
+                style={tw`rounded-full w-48`}
+                source={require("../assets/images/download.jpeg")}
+              />
+              <Text style={tw`font-bold text-yellow-600 text-center`}>
+                Breakfast
+              </Text>
+              <Text style={tw`font-bold text-center text-2xl py-2`}>
+                Fish Salad
+              </Text>
+              <View style={tw`flex flex-row justify-between px-6`}>
+                <View>
+                  <Text
+                    style={tw`font-bold text-3xl text-center text-yellow-600`}
+                  >
+                    25
+                  </Text>
+                  <Text style={tw`text-yellow-600`}>dollars</Text>
+                </View>
+                <View>
+                  <Text
+                    style={tw`font-bold text-3xl text-center text-yellow-600`}
+                  >
+                    500
+                  </Text>
+                  <Text style={tw`text-yellow-600`}>calories</Text>
+                </View>
               </View>
             </View>
-          </View>
+          </TouchableOpacity>
           <View style={tw`mx-12`}>
             <Image
               style={tw`rounded-full w-48`}

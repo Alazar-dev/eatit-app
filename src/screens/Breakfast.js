@@ -1,0 +1,103 @@
+import React from "react";
+import {
+  SafeAreaView,
+  View,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  Image,
+} from "react-native";
+import tw from "tailwind-react-native-classnames";
+
+export default function Breakfast({ navigation }) {
+  return (
+    <SafeAreaView>
+      <ScrollView>
+        <View style={tw`px-3 py-6 ml-6  flex flex-row`} horizontal>
+          <View style={tw`px-4`}>
+            <TouchableOpacity>
+              <Text style={tw`text-black font-bold text-lg`}>
+                Suggested {"\n"} Foods
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View style={tw`px-4`}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Suggested Foods")}
+            >
+              <Text style={tw`text-black font-bold text-lg`}>
+                Change {"\n"} Food
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View style={tw`px-4`}>
+            <TouchableOpacity>
+              <Text style={tw`text-black font-bold text-lg`}>
+                Create{"\n"} Food
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View
+          style={tw`flex flex-row justify-center`}
+          onPress={() => navigation.navigate("breakfast")}
+        >
+          <View style={tw`mx-12`}>
+            <Image
+              style={tw`rounded-full w-48`}
+              source={require("../assets/images/download.jpeg")}
+            />
+            <Text style={tw`font-bold text-yellow-600 text-center`}>
+              Breakfast
+            </Text>
+            <Text style={tw`font-bold text-center text-2xl py-2`}>
+              Fish Salad
+            </Text>
+            <View style={tw`flex flex-row justify-between px-6`}>
+              <View>
+                <Text
+                  style={tw`font-bold text-3xl text-center text-yellow-600`}
+                >
+                  25
+                </Text>
+                <Text style={tw`text-yellow-600`}>dollars</Text>
+              </View>
+              <View>
+                <Text
+                  style={tw`font-bold text-3xl text-center text-yellow-600`}
+                >
+                  500
+                </Text>
+                <Text style={tw`text-yellow-600`}>calories</Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View>
+          <View style={tw`flex flex-row justify-between px-14 pt-10`}>
+            <Text style={tw`text-2xl font-bold`}>Ingredients</Text>
+          </View>
+          <View style={tw`flex `}>
+            <View style={tw`pl-14`}>
+              <Text style={tw`text-lg`}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dolores eos, fuga impedit omnis quisquam vitae? Culpa cum, dolor
+                est harum minus officiis, quisquam repellendus similique soluta
+                tempora tenetur totam ullam?
+              </Text>
+            </View>
+            <View style={tw`pl-14 mt-14`}>
+              <Text style={tw`text-2xl font-bold`}>Ingredients</Text>
+              <Text style={tw`text-lg`}>
+                Lorems ipsum dolor sit amet, consectetur adipisicing elit.
+                Dolores eos, fuga impedit omnis quisquam vitae? Culpa cum, dolor
+                est harum minus officiis, quisquam repellendus similique soluta
+                tempora tenetur totam ullam?
+              </Text>
+            </View>
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
