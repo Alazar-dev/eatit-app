@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import tw from "tailwind-react-native-classnames";
 import Icon from "react-native-vector-icons/FontAwesome";
+import { Picker } from "@react-native-picker/picker";
 
 export default function Home({ navigation }) {
   return (
@@ -153,35 +154,44 @@ export default function Home({ navigation }) {
             </View>
           </TouchableOpacity>
         </ScrollView>
-        <View>
-          <View style={tw`flex flex-row justify-between px-14 py-10`}>
-            <Text style={tw`text-2xl font-bold`}>Grocery List</Text>
-            <View style={tw`flex flex-row`}>
-              <Icon size={20} name="sliders" color="#ca8a04" />
-              <Text style={tw`ml-3`}>Dec 1-7</Text>
-            </View>
+        <View style={tw`flex flex-row justify-between px-14 py-10`}>
+          <Text style={tw`text-2xl font-bold`}>Grocery List</Text>
+          <View style={tw`flex flex-row`}>
+            <Icon size={20} name="sliders" color="#ca8a04" />
+            <Text style={tw`ml-3`}>Dec 1-7</Text>
           </View>
-          <View style={tw`flex flex-row justify-center`}>
-            <View style={tw`px-8`}>
-              <Text style={tw`font-bold text-lg`}>Oil</Text>
-              <Text style={tw`font-bold text-lg`}>Bread</Text>
-              <Text style={tw`font-bold text-lg`}>Onion</Text>
-              <Text style={tw`font-bold text-lg`}>Fish</Text>
-            </View>
-            <View style={tw`px-8`}>
-              <Text style={tw`font-bold text-lg`}>2 litter</Text>
-              <Text style={tw`font-bold text-lg`}>6 pieces</Text>
-              <Text style={tw`font-bold text-lg`}>2 kilos</Text>
-              <Text style={tw`font-bold text-lg`}>a piece</Text>
-            </View>
+        </View>
+        <View style={tw`flex flex-row justify-center`}>
+          <View style={tw`px-8`}>
+            <Text style={tw`font-bold text-lg`}>Oil</Text>
+            <Text style={tw`font-bold text-lg`}>Bread</Text>
+            <Text style={tw`font-bold text-lg`}>Onion</Text>
+            <Text style={tw`font-bold text-lg`}>Fish</Text>
           </View>
-          <View style={tw`flex flex-row justify-center mt-8`}>
-            <TouchableOpacity style={tw`bg-yellow-600 w-48 rounded-2xl py-3`}>
-              <Text style={tw`text-white font-bold text-center`}>
-                Total $ 25
-              </Text>
-            </TouchableOpacity>
+          <View style={tw`px-8`}>
+            <Text style={tw`font-bold text-lg`}>2 litter</Text>
+            <Text style={tw`font-bold text-lg`}>6 pieces</Text>
+            <Text style={tw`font-bold text-lg`}>2 kilos</Text>
+            <Text style={tw`font-bold text-lg`}>a piece</Text>
           </View>
+        </View>
+        <View style={tw`flex flex-row justify-between px-14 py-10`}>
+          <Text style={tw`text-2xl font-bold`}>One Day Plan</Text>
+        </View>
+        <View style={tw`flex flex-row justify-center`}>
+          <Text style={tw`mt-4`}>Budget</Text>
+          <View style={tw`w-28`}>
+            <Picker>
+              <Picker.Item label="Weekly" value="Weekly" />
+              <Picker.Item label="Monthly" value="Monthly" />
+            </Picker>
+          </View>
+          <Icon style={tw`mt-2`} name="dollar" />
+        </View>
+        <View style={tw`flex flex-row justify-center my-8`}>
+          <TouchableOpacity style={tw`bg-yellow-600 w-48 rounded-2xl py-3`}>
+            <Text style={tw`text-white font-bold text-center`}>Total $ 25</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>

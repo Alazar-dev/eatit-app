@@ -36,7 +36,10 @@ export default function Signin({ navigation }) {
               <Text>Email Address</Text>
               <TextInput style={tw`border-b-2 border-gray-400`} />
               <Text>Password</Text>
-              <TextInput style={tw`border-b-2 border-gray-400`} />
+              <TextInput
+                secureTextEntry={true}
+                style={tw`border-b-2 border-gray-400`}
+              />
               <TouchableOpacity>
                 <Text style={tw`text-red-500`}>Forgot Password?</Text>
               </TouchableOpacity>

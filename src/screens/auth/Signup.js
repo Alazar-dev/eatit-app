@@ -9,6 +9,7 @@ import {
   TextInput,
   ScrollView,
 } from "react-native";
+import { Picker } from "@react-native-picker/picker";
 
 export default function Signup({ navigation }) {
   return (
@@ -30,17 +31,36 @@ export default function Signup({ navigation }) {
               <Text>Sign-up</Text>
             </TouchableOpacity>
           </View>
-          <View>
-            <View style={tw`w-60`}>
-              <Text>Full Name</Text>
-              <TextInput style={tw`border-b-2 border-gray-400`} />
-              <Text>Email</Text>
-              <TextInput style={tw`border-b-2 border-gray-400`} />
-              <Text>Password</Text>
-              <TextInput style={tw`border-b-2 border-gray-400`} />
-              <TouchableOpacity>
-                <Text style={tw`text-red-500`}>Forgot Password?</Text>
-              </TouchableOpacity>
+          <View style={tw`w-60`}>
+            <Text>Full Name</Text>
+            <TextInput style={tw`border-b-2 border-gray-400`} />
+            <Text>Email</Text>
+            <TextInput style={tw`border-b-2 border-gray-400`} />
+            <Text>Password</Text>
+            <TextInput style={tw`border-b-2 border-gray-400`} />
+          </View>
+          <View style={tw`flex flex-row justify-between px-5`}>
+            <View style={tw`flex flex-row mt-3`}>
+              <Text style={tw`mr-2 font-bold`}>Salary</Text>
+              <TextInput style={tw`border rounded-lg w-14 p-2 h-8`} />
+            </View>
+            <View style={tw`w-28`}>
+              <Picker>
+                <Picker.Item label="Weekly" value="Weekly" />
+                <Picker.Item label="Monthly" value="Monthly" />
+              </Picker>
+            </View>
+          </View>
+          <View style={tw`flex flex-row justify-between px-5`}>
+            <View style={tw`flex flex-row mt-3`}>
+              <Text style={tw`mt-2 mr-5 font-bold`}>Age</Text>
+              <TextInput style={tw`border rounded-lg w-14 p-2 h-8`} />
+            </View>
+            <View style={tw`w-28`}>
+              <Picker>
+                <Picker.Item label="Male" value="Male" />
+                <Picker.Item label="Female" value="Female" />
+              </Picker>
             </View>
           </View>
         </View>

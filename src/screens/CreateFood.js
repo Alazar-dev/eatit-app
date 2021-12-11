@@ -178,7 +178,10 @@ export default function CreateFood({ navigation }) {
             </View>
           </View>
           <View style={tw`flex flex-row justify-center mt-8 py-16`}>
-            <TouchableOpacity style={tw`bg-yellow-600 w-48 rounded-2xl py-3`}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Home")}
+              style={tw`bg-yellow-600 w-48 rounded-2xl py-3`}
+            >
               <Text style={tw`text-white font-bold text-center`}>Create</Text>
             </TouchableOpacity>
           </View>

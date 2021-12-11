@@ -9,6 +9,7 @@ import CreateFood from "../screens/CreateFood";
 import Profile from "../screens/Profile";
 import Dinner from "../screens/Dinner";
 import Lunch from "../screens/Lunch";
+import ShareFood from "../screens/ShareFood";
 
 export default function Routes() {
   const Stack = createNativeStackNavigator();
@@ -24,6 +25,7 @@ export default function Routes() {
         <Stack.Screen name="Change Food" component={ChangeFood} />
         <Stack.Screen name="Create Food" component={CreateFood} />
         <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Share Food" component={ShareFood} />
       </Stack.Navigator>
     </>
   );

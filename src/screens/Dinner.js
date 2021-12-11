@@ -99,6 +99,14 @@ export default function Dinner({ navigation }) {
             </View>
           </View>
         </View>
+        <View style={tw`flex flex-row justify-center my-8`}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Share Food")}
+            style={tw`bg-yellow-600 w-48 rounded-2xl py-3`}
+          >
+            <Text style={tw`text-white font-bold text-center`}>Share Food</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
