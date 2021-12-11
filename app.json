@@ -5,7 +5,12 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
-  },
-  "name": "eatit-app"
+    ],
+    "android": {
+      "package": "eatit.app"
+    },
+    "ios": {
+      "bundleIdentifier": "eatit.app"
+    }
+  }
 }
