@@ -9,13 +9,13 @@ import {
 } from "react-native";
 import tw from "tailwind-react-native-classnames";
 
-export default function SuggestedFoods({ navigation }) {
+export default function ChangeFood({ navigation }) {
   return (
     <SafeAreaView>
       <ScrollView>
         <View style={tw`px-3 py-6 ml-6 flex flex-row`} horizontal>
           <View style={tw`px-4`}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("Breakfast")}>
               <Text style={tw`text-black font-bold text-lg`}>
                 Suggested {"\n"} Foods
               </Text>

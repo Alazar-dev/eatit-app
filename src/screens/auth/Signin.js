@@ -23,7 +23,7 @@ export default function Signin({ navigation }) {
           />
         </View>
         <View style={tw`py-5 px-8`}>
-          <View style={tw`flex flex-row justify-between pb-10 px-10`}>
+          <View style={tw`flex flex-row justify-between pb-10 px-14`}>
             <TouchableOpacity onPress={() => navigation.navigate("Signin")}>
               <Text>Sign-in</Text>
             </TouchableOpacity>
@@ -43,7 +43,7 @@ export default function Signin({ navigation }) {
             </View>
           </View>
         </View>
-        <View style={tw`flex items-center w-full`}>
+        <View style={tw`flex items-center w-full py-10`}>
           <TouchableOpacity
             onPress={() => navigation.navigate("Home")}
             style={tw`bg-yellow-700 w-72 flex items-center py-4 rounded-3xl`}

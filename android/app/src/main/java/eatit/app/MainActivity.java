@@ -1,4 +1,4 @@
-package com.eatitapp;
+package eatit.app;
 
 import android.os.Bundle;
 
