@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import tw from "tailwind-react-native-classnames";
 import Icon from "react-native-vector-icons/FontAwesome";
-import TabNavigator from "./TabNavigator";
 
 export default function Home({ navigation }) {
   return (
@@ -176,8 +175,14 @@ export default function Home({ navigation }) {
               <Text style={tw`font-bold text-lg`}>a piece</Text>
             </View>
           </View>
+          <View style={tw`flex flex-row justify-center mt-8`}>
+            <TouchableOpacity style={tw`bg-yellow-600 w-48 rounded-2xl py-3`}>
+              <Text style={tw`text-white font-bold text-center`}>
+                Total $ 25
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
-        <TabNavigator />
       </ScrollView>
     </SafeAreaView>
   );
