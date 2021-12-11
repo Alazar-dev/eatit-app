@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import tw from "tailwind-react-native-classnames";
 
-export default function Breakfast({ navigation }) {
+export default function Lunch({ navigation }) {
   return (
     <SafeAreaView>
       <ScrollView>
@@ -49,11 +49,9 @@ export default function Breakfast({ navigation }) {
               style={tw`rounded-full w-48`}
               source={require("../assets/images/download.jpeg")}
             />
-            <Text style={tw`font-bold text-yellow-600 text-center`}>
-              Breakfast
-            </Text>
+            <Text style={tw`font-bold text-yellow-600 text-center`}>Lunch</Text>
             <Text style={tw`font-bold text-center text-2xl py-2`}>
-              Fish Salad
+              Stir Fried Beef
             </Text>
             <View style={tw`flex flex-row justify-between px-6`}>
               <View>
@@ -68,7 +66,7 @@ export default function Breakfast({ navigation }) {
                 <Text
                   style={tw`font-bold text-3xl text-center text-yellow-600`}
                 >
-                  500
+                  255
                 </Text>
                 <Text style={tw`text-yellow-600`}>calories</Text>
               </View>
@@ -81,7 +79,10 @@ export default function Breakfast({ navigation }) {
           </View>
           <View style={tw`flex `}>
             <View style={tw`pl-14`}>
-              <Text style={tw`text-lg`}>Egg, oil, toasted bread and meat</Text>
+              <Text style={tw`text-lg`}>
+                Meat, cheese, mushroom0m, broccoli, cauliflower, onion,
+                tomatoes, oil, bread
+              </Text>
             </View>
           </View>
         </View>

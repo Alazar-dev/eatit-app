@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import tw from "tailwind-react-native-classnames";
 import Icon from "react-native-vector-icons/FontAwesome";
+import TabNavigator from "./TabNavigator";
 
 export default function Home({ navigation }) {
   return (
@@ -59,7 +60,7 @@ export default function Home({ navigation }) {
           </View>
         </ScrollView>
         <ScrollView horizontal>
-          <TouchableOpacity onPress={() => navigation.navigate("Break Fast")}>
+          <TouchableOpacity onPress={() => navigation.navigate("Breakfast")}>
             <View style={tw`mx-12`}>
               <Image
                 style={tw`rounded-full w-48`}
@@ -84,23 +85,24 @@ export default function Home({ navigation }) {
                   <Text
                     style={tw`font-bold text-3xl text-center text-yellow-600`}
                   >
-                    500
+                    215
                   </Text>
                   <Text style={tw`text-yellow-600`}>calories</Text>
                 </View>
               </View>
             </View>
           </TouchableOpacity>
-          <View style={tw`mx-12`}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Lunch")}
+            style={tw`mx-12`}
+          >
             <Image
               style={tw`rounded-full w-48`}
               source={require("../assets/images/download.jpeg")}
             />
-            <Text style={tw`font-bold text-yellow-600 text-center`}>
-              Breakfast
-            </Text>
+            <Text style={tw`font-bold text-yellow-600 text-center`}>Lunch</Text>
             <Text style={tw`font-bold text-center text-2xl py-2`}>
-              Fish Salad
+              Stir fried beef
             </Text>
             <View style={tw`flex flex-row justify-between px-6`}>
               <View>
@@ -115,22 +117,22 @@ export default function Home({ navigation }) {
                 <Text
                   style={tw`font-bold text-3xl text-center text-yellow-600`}
                 >
-                  500
+                  315
                 </Text>
                 <Text style={tw`text-yellow-600`}>calories</Text>
               </View>
             </View>
-          </View>
-          <View>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("Dinner")}>
             <Image
               style={tw`rounded-full w-48`}
               source={require("../assets/images/download.jpeg")}
             />
             <Text style={tw`font-bold text-yellow-600 text-center`}>
-              Breakfast
+              Dinner
             </Text>
             <Text style={tw`font-bold text-center text-2xl py-2`}>
-              Fish Salad
+              Chicken Salad with fish
             </Text>
             <View style={tw`flex flex-row justify-between px-6`}>
               <View>
@@ -145,12 +147,12 @@ export default function Home({ navigation }) {
                 <Text
                   style={tw`font-bold text-3xl text-center text-yellow-600`}
                 >
-                  500
+                  110
                 </Text>
                 <Text style={tw`text-yellow-600`}>calories</Text>
               </View>
             </View>
-          </View>
+          </TouchableOpacity>
         </ScrollView>
         <View>
           <View style={tw`flex flex-row justify-between px-14 py-10`}>
@@ -182,6 +184,7 @@ export default function Home({ navigation }) {
             </TouchableOpacity>
           </View>
         </View>
+        <TabNavigator />
       </ScrollView>
     </SafeAreaView>
   );
